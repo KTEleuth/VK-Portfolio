@@ -1,0 +1,57 @@
+body {
+  background-color: rgb(246, 246, 246);
+  font-family: 'Roboto', sans-serif;
+}
+.wrapper {
+  width: 100%;
+  max-width: 1366px;
+  height: 2000px;
+  background-color: rgb(254, 254, 254);
+  margin: 0 auto;
+}
+.background-image {
+  background-image: url('images/bryce-evans-202182.jpg');
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 1366px;
+  height: 100%;
+  z-index: 9999;
+}
+.header {
+  display: grid;
+}
+.menu {
+  margin-top: 35px;
+  display: block;
+}
+.logo {
+  float: left;
+  margin-left: 120px;
+}
+a img.hover {
+  display: none;
+}
+a img.default {
+  display: inherit;
+}
+a:hover img.hover {
+  display: inherit;
+}
+a:hover img.default {
+  display: none;
+}
+.links {
+  float: right;
+  margin-right: 120px;
+}
+.title {
+  text-align: center;
+}
+.button {
+  text-align: center;
+}
+.content {
+  display: grid;
+}
