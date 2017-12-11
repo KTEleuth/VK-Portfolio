@@ -30,7 +30,17 @@ body {
   float: left;
   margin-left: 120px;
 }
-a img.hover {
+a img {
+  position: absolute;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+a:hover img.hover {
+  opacity: 0;
+}
+/*a img.hover {
   display: none;
 }
 a img.default {
@@ -41,7 +51,7 @@ a:hover img.hover {
 }
 a:hover img.default {
   display: none;
-}
+}*/
 .links {
   float: right;
   margin-right: 120px;
