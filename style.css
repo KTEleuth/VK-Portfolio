@@ -1,6 +1,7 @@
 body {
   background-color: rgb(246, 246, 246);
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
 .wrapper {
   width: 100%;
@@ -11,57 +12,80 @@ body {
 }
 .background-image {
   background-image: url('images/bryce-evans-202182.jpg');
-  position: absolute;
+  /*position: absolute;*/
   background-size: contain;
   background-repeat: no-repeat;
-  width: 100%;
-  max-width: 1366px;
-  height: 100%;
   z-index: 9999;
 }
 .header {
   display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100px 30px 200px 2px 150px 50px;
 }
-.menu {
-  margin-top: 35px;
-  display: block;
+.header > .menu {
+  grid-row: 1;
+  grid-column: span 12;
 }
-.logo {
-  float: left;
-  margin-left: 120px;
+.header > .menu-wrap {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100px;
 }
-a img {
+.menu > .logo {
+  grid-column: 2;
+  border: 1px solid black;
+}
+.logo > a img {
   position: absolute;
+  height: 52px;
+  width: 50px;
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
 }
-a:hover img.hover {
-  opacity: 0;
+.menu > .links {
+  grid-column: 6 / 12;
+  border: 1px solid black;
 }
-/*a img.hover {
-  display: none;
+.menu > .links > ul {
+  display: inline-block;
+  vertical-align: top;
 }
-a img.default {
-  display: inherit;
+.menu > .links > ul > li {
+  list-style: none;
+  float: left;
 }
-a:hover img.hover {
-  display: inherit;
+.menu > .logo > li > a {
+  text-decoration: none;
+  font-size: 25px;
 }
-a:hover img.default {
-  display: none;
-}*/
-.links {
-  float: right;
-  margin-right: 120px;
+.header > .name {
+  font-size: 1.9em;
+  font-weight: 300;
+  border: 1px solid black;
+  grid-row: 2;
+  grid-column: span 1;
+  justify-self: cente;
 }
-.title {
-  text-align: center;
+.header > .position {
+  font-size: 3em;
+  font-weight: 700;
+  color: rgb(78, 142, 181);
+  border: 1px solid black;
+  grid-row: 3;
 }
-.button {
-  text-align: center;
+.header > .line {
+  grid-row: 4;
 }
-.content {
-  display: grid;
+.header > .description {
+  font-size: 1.2em;
+  line-height: 20pt;
+  font-weight: 500;
+  border: 1px solid black;
+  grid-row: 5;
+}
+.header > .button {
+  border: 1px solid black;
+  grid-row: 6;
 }
