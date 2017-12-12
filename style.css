@@ -17,25 +17,33 @@ body {
   background-repeat: no-repeat;
   z-index: 9999;
 }
+
+/*********** 1.TOP ***********/
+
 .header {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 100px 30px 200px 2px 150px 50px;
+  grid-template-rows: auto;
 }
+/* 1a. MENU */
+
 .header > .menu {
   grid-row: 1;
   grid-column: span 12;
+  margin-top: 20px;
+  margin-bottom: 8%;
 }
 .header > .menu-wrap {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 100px;
+  grid-template-rows: 55px;
 }
 .menu > .logo {
   grid-column: 2;
-  border: 1px solid black;
 }
 .logo > a img {
+  font-size: 0.9em;
+  color: rgb(0, 0, 0);
   position: absolute;
   height: 52px;
   width: 50px;
@@ -44,48 +52,138 @@ body {
   -o-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
 }
+.logo > a:hover img.hover {
+  opacity: 0;
+}
 .menu > .links {
-  grid-column: 6 / 12;
-  border: 1px solid black;
+  grid-column: 3 / 11;
+  justify-self: right;
 }
 .menu > .links > ul {
   display: inline-block;
-  vertical-align: top;
+  padding-left: 0;
+  font-size: 0.9em;
 }
 .menu > .links > ul > li {
   list-style: none;
   float: left;
+  padding-left: 30px;
 }
-.menu > .logo > li > a {
+.menu > .links > ul > li > a {
   text-decoration: none;
-  font-size: 25px;
+  color: rgb(0, 0, 0);
+  -webkit-transition: color 1s;
+  -moz-transition: color 1s;
+  -o-transition: color 1s;
+  transition: color 1s;
 }
+.menu > .links > ul > li > a:hover {
+  color: rgb(131, 131, 131);
+  -webkit-transition: color 1s;
+  -moz-transition: color 1s;
+  -o-transition: color 1s;
+  transition: color 1s;
+}
+.menu > .links > ul > li > a.project-button {
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  padding: 15px 30px;
+  background-color: rgb(90, 144, 186);
+  border-radius: 30px;
+  -webkit-transition: color 1s;
+  -moz-transition: color 1s;
+  -o-transition: color 1s;
+  transition: color 1s;
+  -webkit-transition: background-color 2s;
+  -moz-transition: background-color 2s;
+  -o-transition: background-color 2s;
+  transition: background-color 2s;
+}
+.menu > .links > ul > li > a.project-button:hover {
+  background-color: rgb(173, 212, 235);
+  -webkit-transition: background-color 2s;
+  -moz-transition: background-color 2s;
+  -o-transition: background-color 2s;
+  transition: background-color 2s;
+}
+
+/* 1b. Header content */
+
 .header > .name {
   font-size: 1.9em;
   font-weight: 300;
-  border: 1px solid black;
+  margin-bottom: 1%;
   grid-row: 2;
-  grid-column: span 1;
-  justify-self: cente;
+  grid-column: span 12;
+  justify-self: center;
 }
 .header > .position {
   font-size: 3em;
   font-weight: 700;
   color: rgb(78, 142, 181);
-  border: 1px solid black;
+  margin-bottom: 2%;
   grid-row: 3;
+  grid-column: span 12;
+  justify-self: center;
 }
 .header > .line {
+  background-image: url(images/line.png);
   grid-row: 4;
+  grid-column: span 12;
+  height: 2px;
+  width: 167px;
+  justify-self: center;
 }
 .header > .description {
   font-size: 1.2em;
   line-height: 20pt;
   font-weight: 500;
-  border: 1px solid black;
+  color: rgb(50, 51, 53);
   grid-row: 5;
+  grid-column: span 12;
+  justify-self: center;
+  width: 570px;
+  margin-top: 2%;
+  text-align: center;
 }
 .header > .button {
-  border: 1px solid black;
+  margin-top: 5%;
   grid-row: 6;
+  grid-column: span 12;
+  justify-self: center;
+}
+.header > .button > a {
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  padding: 20px 40px;
+  background-color: rgb(90, 144, 186);
+  border-radius: 30px;
+  -webkit-transition: background-color 2s;
+  -moz-transition: background-color 2s;
+  -o-transition: background-color 2s;
+  transition: background-color 2s;
+}
+.header > .button > a:hover {
+  background-color: rgb(173, 212, 235);
+  -webkit-transition: background-color 2s;
+  -moz-transition: background-color 2s;
+  -o-transition: background-color 2s;
+  transition: background-color 2s;
+}
+
+/* End of TOP */
+
+/****** Responsive starts *******/
+
+@media (max-width: 1100px) {
+  .header > .menu {
+    margin-bottom: 5%;
+  }
+}
+@media (max-width: 900px) {
+  .header > .menu {
+    margin-bottom: 3%;
+  }
 }
