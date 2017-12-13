@@ -9,10 +9,12 @@ body {
   height: 2000px;
   background-color: rgb(254, 254, 254);
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
 }
 .background-image {
   background-image: url('images/bryce-evans-202182.jpg');
-  /*position: absolute;*/
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 9999;
@@ -21,6 +23,12 @@ body {
 /*********** 1.TOP ***********/
 
 .header {
+  grid-row: 1;
+  grid-column: span 12;
+  border: 1px solid black;
+  
+}
+.header-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
@@ -94,17 +102,17 @@ body {
   -moz-transition: color 1s;
   -o-transition: color 1s;
   transition: color 1s;
-  -webkit-transition: background-color 2s;
-  -moz-transition: background-color 2s;
-  -o-transition: background-color 2s;
-  transition: background-color 2s;
+  -webkit-transition: background-color 5s;
+  -moz-transition: background-color 5s;
+  -o-transition: background-color 5s;
+  transition: background-color 5s;
 }
 .menu > .links > ul > li > a.project-button:hover {
   background-color: rgb(173, 212, 235);
-  -webkit-transition: background-color 2s;
-  -moz-transition: background-color 2s;
-  -o-transition: background-color 2s;
-  transition: background-color 2s;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -o-transition: background-color 1s;
+  transition: background-color 1s;
 }
 
 /* 1b. Header content */
@@ -160,20 +168,40 @@ body {
   padding: 20px 40px;
   background-color: rgb(90, 144, 186);
   border-radius: 30px;
-  -webkit-transition: background-color 2s;
-  -moz-transition: background-color 2s;
-  -o-transition: background-color 2s;
-  transition: background-color 2s;
+  -webkit-transition: background-color 5s;
+  -moz-transition: background-color 5s;
+  -o-transition: background-color 5s;
+  transition: background-color 5s;
 }
 .header > .button > a:hover {
   background-color: rgb(173, 212, 235);
-  -webkit-transition: background-color 2s;
-  -moz-transition: background-color 2s;
-  -o-transition: background-color 2s;
-  transition: background-color 2s;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -o-transition: background-color 1s;
+  transition: background-color 1s;
 }
 
 /* End of TOP */
+
+/********** 2. CONTENT ****************/
+
+.content {
+  grid-row: 2;
+  grid-column: span 12;
+  border: 1px solid black;
+}
+
+/* End opf content */
+
+/********** 3. FOOTER ***************/
+
+.footer {
+  grid-row: 3;
+  grid-column: span 12;
+  border: 1px solid black;
+}
+
+/* End of footer */
 
 /****** Responsive starts *******/
 
