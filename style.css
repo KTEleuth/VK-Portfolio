@@ -6,14 +6,14 @@ body {
 .wrapper {
   width: 100%;
   max-width: 1366px;
+  height: 2000px;
   background-color: rgb(254, 254, 254);
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto;
+  display: block;
 }
 .background-image {
   background-image: url('images/bryce-evans-202182.jpg');
+  /*position: absolute;*/
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 9999;
@@ -22,14 +22,10 @@ body {
 /*********** 1.TOP ***********/
 
 .header {
-  grid-row: 1;
-  grid-column: span 12;
-  height: 100%;
-}
-.header-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(6,100px);
+  grid-template-rows: auto;
+  border: 1px solid black;
 }
 
 /* 1a. MENU */
@@ -119,7 +115,7 @@ body {
 .header > .name {
   font-size: 1.9em;
   font-weight: 300;
-  /*margin-bottom: 1%;*/
+  margin-bottom: 1%;
   grid-row: 2;
   grid-column: span 12;
   justify-self: center;
@@ -128,7 +124,7 @@ body {
   font-size: 3em;
   font-weight: 700;
   color: rgb(78, 142, 181);
-  /*margin-bottom: 2%;*/
+  margin-bottom: 2%;
   grid-row: 3;
   grid-column: span 12;
   justify-self: center;
@@ -150,17 +146,16 @@ body {
   grid-column: span 12;
   justify-self: center;
   width: 570px;
-  /*margin-top: 2%;*/
+  margin-top: 2%;
   text-align: center;
 }
 .header > .button {
-  /*margin-top: 5%;*/
+  margin-top: 5%;
   grid-row: 6;
   grid-column: span 12;
   justify-self: center;
 }
-.header > a.button {
-  height: 20px;
+.header > .button > a {
   text-decoration: none;
   font-size: 1.1em;
   font-weight: 700;
@@ -173,7 +168,7 @@ body {
   -o-transition: background-color 5s;
   transition: background-color 5s;
 }
-.header >  a.button:hover {
+.header > .button > a:hover {
   background-color: rgb(173, 212, 235);
   -webkit-transition: background-color 1s;
   -moz-transition: background-color 1s;
@@ -183,34 +178,73 @@ body {
 
 /* End of TOP */
 
-/********** 2. CONTENT ****************/
+/*************** CONTENT ***************/
 
 .content {
-  grid-row: 2;
-  grid-column: span 12;
+  border: 1px solid black;
+  padding: 50px;
+  margin-top: 18.5%;
 }
 
-/* End opf content */
+/* End of Content */
 
-/********** 3. FOOTER ***************/
+/*************** FOOTER *****************/
 
 .footer {
-  grid-row: 3;
-  grid-column: span 12;
+  border: 1px solid black;
+  padding: 50px;
 }
 
-/* End of footer */
-
-/****** Responsive starts *******
-
+/****** Responsive starts *******/
+@media (max-width: 1300px) {
+  .content {
+    margin-top: 18%;
+  }
+  .header > .menu {
+    margin-bottom: 7%;
+  }
+}
+@media (max-width: 1200px) {
+  .content {
+    margin-top: 17.5%;
+  }
+  .header > .menu {
+    margin-bottom: 6%;
+  }
+}
 @media (max-width: 1100px) {
+  .content {
+    margin-top: 16.2%;
+  }
   .header > .menu {
     margin-bottom: 5%;
   }
 }
+@media (max-width: 1000px) {
+  .content {
+    margin-top: 15.3%;
+  }
+  .header > .menu {
+    margin-bottom: 4%;
+  }
+}
 @media (max-width: 900px) {
+  .content {
+    margin-top: 12.8%;
+  }
   .header > .menu {
     margin-bottom: 3%;
   }
 }
-*/
+@media (max-width: 850px) {
+  .content {
+    margin-top: 11%;
+  }
+}
+@media (max-width: 750px) {
+  .content {
+    margin-top: 6.5%;
+  }
+}
+
+
