@@ -6,7 +6,6 @@ body {
 .wrapper {
   width: 100%;
   max-width: 1366px;
-  height: 2000px;
   background-color: rgb(254, 254, 254);
   margin: 0 auto;
   display: block;
@@ -16,7 +15,6 @@ body {
   /*position: absolute;*/
   background-size: contain;
   background-repeat: no-repeat;
-  z-index: 9999;
 }
 
 /*********** 1.TOP ***********/
@@ -29,18 +27,18 @@ body {
 
 /* 1a. MENU */
 
-.header > .menu {
+.menu {
   grid-row: 1;
   grid-column: span 12;
   margin-top: 20px;
   margin-bottom: 8%;
 }
-.header > .menu-wrap {
+.menu-wrap {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 55px;
 }
-.menu > .logo {
+.logo {
   grid-column: 2;
 }
 .logo > a img {
@@ -57,21 +55,21 @@ body {
 .logo > a:hover img.hover {
   opacity: 0;
 }
-.menu > .links {
+.links {
   grid-column: 3 / 11;
   justify-self: right;
 }
-.menu > .links > ul {
+.links > ul {
   display: inline-block;
   padding-left: 0;
   font-size: 0.9em;
 }
-.menu > .links > ul > li {
+.links > ul > li {
   list-style: none;
   float: left;
   padding-left: 30px;
 }
-.menu > .links > ul > li > a {
+.links > ul > li > a {
   text-decoration: none;
   color: rgb(0, 0, 0);
   -webkit-transition: color 1s;
@@ -79,14 +77,14 @@ body {
   -o-transition: color 1s;
   transition: color 1s;
 }
-.menu > .links > ul > li > a:hover {
+.links > ul > li > a:hover {
   color: rgb(131, 131, 131);
   -webkit-transition: color 1s;
   -moz-transition: color 1s;
   -o-transition: color 1s;
   transition: color 1s;
 }
-.menu > .links > ul > li > a.project-button {
+.links > ul > li > a.project-button {
   font-weight: 700;
   color: rgb(255, 255, 255);
   padding: 15px 30px;
@@ -101,7 +99,7 @@ body {
   -o-transition: background-color 5s;
   transition: background-color 5s;
 }
-.menu > .links > ul > li > a.project-button:hover {
+.links > ul > li > a.project-button:hover {
   background-color: rgb(173, 212, 235);
   -webkit-transition: background-color 1s;
   -moz-transition: background-color 1s;
@@ -111,7 +109,7 @@ body {
 
 /* 1b. Header content */
 
-.header > .name {
+.name {
   font-size: 1.9em;
   font-weight: 300;
   margin-bottom: 1%;
@@ -119,7 +117,7 @@ body {
   grid-column: span 12;
   justify-self: center;
 }
-.header > .position {
+.position {
   font-size: 3em;
   font-weight: 700;
   color: rgb(78, 142, 181);
@@ -128,7 +126,7 @@ body {
   grid-column: span 12;
   justify-self: center;
 }
-.header > .line {
+.line {
   background-image: url(images/line.png);
   grid-row: 4;
   grid-column: span 12;
@@ -136,7 +134,7 @@ body {
   width: 167px;
   justify-self: center;
 }
-.header > .description {
+.description {
   font-size: 1.2em;
   line-height: 20pt;
   font-weight: 500;
@@ -148,13 +146,13 @@ body {
   margin-top: 2%;
   text-align: center;
 }
-.header > .button {
+.button {
   margin-top: 5%;
   grid-row: 6;
   grid-column: span 12;
   justify-self: center;
 }
-.header > .button > a {
+.button > a {
   text-decoration: none;
   font-size: 1.1em;
   font-weight: 700;
@@ -167,7 +165,7 @@ body {
   -o-transition: background-color 5s;
   transition: background-color 5s;
 }
-.header > .button > a:hover {
+.button > a:hover {
   background-color: rgb(173, 212, 235);
   -webkit-transition: background-color 1s;
   -moz-transition: background-color 1s;
@@ -199,7 +197,7 @@ body {
   .content {
     margin-top: 18%;
   }
-  .header > .menu {
+  .menu {
     margin-bottom: 7%;
   }
 }
@@ -207,7 +205,7 @@ body {
   .content {
     margin-top: 17.5%;
   }
-  .header > .menu {
+  .menu {
     margin-bottom: 6%;
   }
 }
@@ -215,7 +213,7 @@ body {
   .content {
     margin-top: 16.2%;
   }
-  .header > .menu {
+  .menu {
     margin-bottom: 5%;
   }
 }
@@ -223,7 +221,7 @@ body {
   .content {
     margin-top: 15.3%;
   }
-  .header > .menu {
+  .menu {
     margin-bottom: 4%;
   }
 }
@@ -231,7 +229,7 @@ body {
   .content {
     margin-top: 12.8%;
   }
-  .header > .menu {
+  .menu {
     margin-bottom: 3%;
   }
 }
@@ -240,8 +238,112 @@ body {
     margin-top: 11%;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .content {
     margin-top: 6.5%;
+  }
+  .links {
+    grid-column: 3 / 12;
+    justify-self: left;
+  }
+  .name {
+    font-size: 1.7em;
+  }
+  .position {
+    font-size: 2.5em;
+  }
+  .description {
+    font-size: 1.1em;
+    width: 500px;
+  }
+}
+@media (max-width: 672px) {
+  .menu {
+    margin-bottom: 0;
+  }
+  .links {
+    font-size: 1.2em;
+    font-weight: 700;
+    grid-column: 3 / 12;
+    justify-self: center;
+  }
+  .links > ul > li > a {
+    color: rgb(65, 65, 65);
+  }
+  .project-button {
+    display: none;
+  }
+  .name {
+    font-size: 1.5em;
+  }
+  .position {
+    font-size: 2em;
+  }
+}
+@media (max-width: 600px) {
+  .menu {
+    margin-top: 5px;
+  }
+  .name {
+    font-size: 1.4em;
+  }
+  .position {
+    font-size: 1.8em;
+  }
+  .description {
+    font-size: 1em;
+    line-height: 18pt;
+    width: 450px;
+  }
+  .button {
+    margin-top: 6%;
+  }
+  .button > a {
+    font-size: 0.9em;
+    font-weight: 700;
+    padding: 15px 35px;
+    border-radius: 30px;
+  }
+}
+@media (max-width: 540px) {
+  .description {
+    font-size: 0.95em;
+    width: 430px;
+  }
+  .button {
+    margin-top: 4%;
+  }
+}
+@media (max-width: 500px) {
+  .name {
+    font-size: 1.2em;
+  }
+  .position {
+    font-size: 1.5em;
+  }
+  .description {
+    font-size: 0.8em;
+    font-weight: 700;
+    line-height: 16pt;
+    width: 360px;
+  }
+  .button {
+    margin-top: 5%;
+  }
+  .button > a {
+    font-size: 0.9em;
+    font-weight: 700;
+  }
+}
+@media (max-width: 460px) {
+  .description {
+    line-height: 15pt;
+  }
+  .button {
+    margin-top: 4%;
+  }
+  .button > a {
+    padding: 10px 30px;
+    border-radius: 30px;
   }
 }
