@@ -255,11 +255,33 @@ a.btn:hover {
   line-height: 23pt;
 }
 .social {
-  margin: 2.5% auto 15% auto;
+  margin: 2.5% auto auto auto;
   max-width: 1040px;
 }
 
 /* 2b. Portfolio */
+
+.portfolio {
+  margin-top: 150px;
+}
+.portfolio__title {
+  padding-bottom: 20px;
+  padding-left: 20%;
+  font-size: 1.8em;
+  font-weight: 500;
+}
+.portfolio__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto 5%;
+}
+.portfolio__block {
+  height: 266px;
+  width: 198px;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 2%;
+}
 
 /* 3b. Feedback */
 
