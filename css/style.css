@@ -33,7 +33,7 @@ a {
   grid-template-rows: auto;
 }
 
-/* 1a. MENU */
+/* 1a. MENU (in footer also) */
 
 .menu {
   grid-row: 1;
@@ -392,6 +392,7 @@ a.btn:hover {
 .feedback__showmore {
   font-size: 0.875em;
   font-weight: 500;
+  padding-bottom: 100px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -404,7 +405,35 @@ a.btn:hover {
 /*************** FOOTER *****************/
 
 .footer {
-  padding: 50px;
+  height: 240px;
+  background-color: rgb(255, 255, 255);
+}
+.footer .menu {
+  margin: 0 20% 0 15%;
+  padding-top: 55px;
+}
+.footer .logo > a img {
+  transform: scale(0.9);
+}
+.footer a.link {
+  font-size: 0.9em;
+  font-weight: 500;
+  padding: 20px;
+  color: rgb(78, 142, 181);
+}
+.footer .links > div:last-child {
+  margin-left: auto;
+}
+.footer a.btn {
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  padding: 15px 35px;
+  background-color: rgb(90, 144, 186);
+  border-radius: 30px;
+}
+.footer .social {
+  margin: 5% 0 0 10%;
+  transform: scale(0.85);
 }
 
 /* End of Footer */
@@ -460,7 +489,8 @@ a.btn:hover {
   .portfolio {
     margin-top: 70px;
   }
-  .portfolio__title, .feedback__title {
+  .portfolio__title,
+  .feedback__title {
     padding-left: 0;
     text-align: center;
   }
@@ -468,11 +498,11 @@ a.btn:hover {
     margin-top: 50px;
   }
   .feedback {
-  margin-top: 70px;
-}
-.feedback__block {
-  margin-bottom: 20px;
-}
+    margin-top: 70px;
+  }
+  .feedback__block {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 900px) {
