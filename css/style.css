@@ -272,7 +272,7 @@ a.btn:hover {
 }
 .portfolio__title {
   padding-bottom: 20px;
-  padding-left: 20%;
+  padding-left: 17%;
   font-size: 1.8em;
   font-weight: 500;
 }
@@ -283,9 +283,10 @@ a.btn:hover {
   margin: auto 5%;
 }
 .portfolio__block {
-  height: 270px;
+  height: 266px;
   width: 200px;
   margin: 2%;
+  background-color: rgb(255, 255, 255);
   -webkit-box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.1);
@@ -297,6 +298,29 @@ a.btn:hover {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.1s;
   transform: scale(0.99, 0.99);
+}
+.portfolio--name {
+  font-weight: 500;
+  padding: 10px 0 0 10px;
+  color: rgb(0, 0, 0);
+}
+.portfolio--name hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.portfolio--type {
+  font-size: 0.9em;
+  font-weight: 400;
+  padding-left: 10px;
+  color: rgb(0, 0, 0);
+}
+.portfolio--date {
+  padding-left: 10px;
+  padding-top: 25px;
+  font-size: 0.8em;
+  color: rgb(138, 138, 138);
 }
 .portfolio .button {
   text-align: center;
@@ -363,6 +387,16 @@ a.btn:hover {
     margin: 2% auto 5% auto;
     text-align: center;
   }
+  .portfolio {
+  margin-top: 70px;
+}
+.portfolio__title {
+  padding-left: 0;
+  text-align: center;
+}
+.portfolio .button {
+  margin-top: 50px;
+}
 }
 
 @media (max-width: 900px) {
