@@ -35,30 +35,31 @@ a {
 
 /* 1a. MENU (in footer also) */
 
-.menu {
+.header__menu {
   grid-row: 1;
   grid-column: span 12;
-  margin: 40px 10% 8.5% 10%;
+  margin: 40px 10% 8.5% 10%; /* CHANGE % TO PX!!! */
 }
-.logo > a img {
+.menu__logo > a img {
   position: absolute;
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
 }
-.logo > a:hover img.hover {
+.menu__logo > a:hover img.hover {
   opacity: 0;
 }
-.links {
+.menu__links {
   display: flex;
   padding-top: 15px;
 }
-.links > div:first-child {
+.menu__links > div:first-child {
   margin-left: auto;
 }
-a.link {
+a.menu__links--link {
   font-size: 0.875em;
+  font-weight: 500;
   padding: 20px;
   color: rgb(0, 0, 0);
   -webkit-transition: color 1s;
@@ -66,7 +67,7 @@ a.link {
   -o-transition: color 1s;
   transition: color 1s;
 }
-a.link:hover {
+a.menu__links--link:hover {
   color: rgb(165, 165, 165);
   -webkit-transition: color 1s;
   -moz-transition: color 1s;
@@ -134,7 +135,7 @@ a.link:hover {
   transition: color 1s;
 }*/
 
-a.btn {
+a.menu__links--button {
   font-weight: 700;
   color: rgb(255, 255, 255);
   padding: 12px 30px;
@@ -149,7 +150,7 @@ a.btn {
   -o-transition: background-color 5s;
   transition: background-color 5s;
 }
-a.btn:hover {
+a.menu__links--button:hover {
   color: rgb(255, 255, 255);
   background-color: rgb(173, 212, 235);
   -webkit-transition: background-color 1s;
@@ -160,24 +161,24 @@ a.btn:hover {
 
 /* 1b. Header content */
 
-.name {
+.header--name {
   font-size: 1.875em;
   font-weight: 300;
-  margin-bottom: 0.5%;
+  margin-bottom: 0.5%; /* CHANGE % TO PX!!! */
   grid-row: 2;
   grid-column: span 12;
   justify-self: center;
 }
-.position {
+.header--position {
   font-size: 3em;
   font-weight: 700;
   color: rgb(78, 142, 181);
-  margin-bottom: 1.5%;
+  margin-bottom: 1.5%; /* CHANGE % TO PX!!! */
   grid-row: 3;
   grid-column: span 12;
   justify-self: center;
 }
-.line {
+.header--line {
   background-image: url('../images/line.png');
   grid-row: 4;
   grid-column: span 12;
@@ -185,7 +186,7 @@ a.btn:hover {
   width: 167px;
   justify-self: center;
 }
-.description {
+.header--description {
   font-size: 1.125em;
   line-height: 22pt;
   font-weight: 500;
@@ -194,16 +195,16 @@ a.btn:hover {
   grid-column: span 12;
   justify-self: center;
   width: 570px;
-  margin-top: 1.5%;
+  margin-top: 1.5%; /* CHANGE % TO PX!!! */
   text-align: center;
 }
-.button {
-  margin-top: 7%;
+.header--button {
+  margin-top: 7%; /* CHANGE % TO PX!!! */
   grid-row: 6;
   grid-column: span 12;
   justify-self: center;
 }
-.button > a {
+.header--button > a {
   font-size: 1.125em;
   font-weight: 700;
   color: rgb(255, 255, 255);
@@ -215,7 +216,7 @@ a.btn:hover {
   -o-transition: background-color 5s;
   transition: background-color 5s;
 }
-.button > a:hover {
+.header--button > a:hover {
   background-color: rgb(173, 212, 235);
   -webkit-transition: background-color 1s;
   -moz-transition: background-color 1s;
@@ -228,119 +229,119 @@ a.btn:hover {
 /*************** 2. MAIN CONTENT ***************/
 
 .content {
-  margin-top: 28%;
+  margin-top: 370px; /* CHANGE % TO PX!!! */
 }
 
 /* 2a. Intro */
-.intro {
+.content__intro {
   background-color: rgb(255, 255, 255);
-  margin: 6.5% auto auto auto;
+  margin: 6.5% auto auto auto; /* CHANGE % TO PX!!! */
   max-width: 1040px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
 }
-.intro__photo {
+.content__intro--photo {
   grid-column: 1;
   grid-row: 1;
 }
-.intro__content {
+.content__intro--content {
   grid-column: 2;
   grid-row: 1;
   color: rgb(90, 144, 186);
   font-size: 2.25em;
   font-weight: 500;
-  margin: 5% 5% 2% 6%;
+  margin: 5% 5% 2% 6%; /* CHANGE % TO PX!!! */
 }
-.intro__content p {
-  font-size: 0.5em;
+.content__intro--content p {
+  font-size: 0.48em;
   font-weight: 400;
   color: rgb(0, 0, 0);
   line-height: 23pt;
 }
-.social {
-  margin: 2.5% auto auto auto;
+.content__social {
+  margin: 2.5% auto auto auto; /* CHANGE % TO PX!!! */
   max-width: 1040px;
 }
 
 /* 2b. Portfolio */
 
-.portfolio {
+.content__portfolio {
   margin-top: 150px;
   margin-bottom: 100px;
 }
-.portfolio__title,
-.feedback__title {
+.content__portfolio--title,
+.content__feedback--title {
   padding-bottom: 20px;
-  padding-left: 17%;
+  padding-left: 17%; /* CHANGE % TO PX!!! */
   font-size: 1.875em;
   font-weight: 500;
 }
-.portfolio__content {
+.content__portfolio--content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: auto 5%;
+  margin: auto 5%; /* CHANGE % TO PX!!! */
 }
-.portfolio__block {
+.content__portfolio--block {
   height: 266px;
   width: 200px;
-  margin: 2%;
+  margin: 2%; /* CHANGE % TO PX!!! */
   background-color: rgb(255, 255, 255);
   -webkit-box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.1s;
 }
-.portfolio__block:hover {
+.content__portfolio--block:hover {
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.1s;
   transform: scale(0.99, 0.99);
 }
-.portfolio--name {
+.content__portfolio--name {
   font-size: 0.966em;
   font-weight: 500;
   padding: 10px 0 0 10px;
   color: rgb(0, 0, 0);
 }
-.portfolio--name hr {
+.content__portfolio--name hr {
   border: 0;
   height: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-.portfolio--type {
+.content__portfolio--type {
   font-size: 0.858em;
   font-weight: 400;
   padding-left: 10px;
   color: rgb(0, 0, 0);
 }
-.portfolio--date {
+.content__portfolio--date {
   padding-left: 10px;
   padding-top: 25px;
   font-size: 0.751em;
   color: rgb(138, 138, 138);
 }
-.portfolio .button {
+.content__portfolio .header--button {
   text-align: center;
   margin-top: 100px;
 }
 
 /* 3b. Feedback */
 
-.feedback {
+.content__feedback {
   margin-top: 140px;
   margin-bottom: 20px;
 }
-.feedback__title {
-  padding-left: 26%;
+.content__feedback--title {
+  padding-left: 26%; /* CHANGE % TO PX!!! */
   padding-bottom: 30px;
   text-transform: uppercase;
 }
-.feedback__block {
+.content__feedback--block {
   display: block;
   width: 100%;
   height: 100%;
@@ -353,51 +354,58 @@ a.btn:hover {
   box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.1s;
 }
-.feedback__block--top {
+.content__feedback--block-top {
   display: flex;
   justify-content: space-between;
   padding: 25px;
 }
-.feedback--name {
+.content__feedback--name {
   text-transform: uppercase;
   font-size: 1.125em;
   font-weight: 500;
   color: rgb(90, 144, 186);
 }
-.feedback--date {
+.content__feedback--date {
   text-transform: uppercase;
   font-size: 0.75em;
   font-weight: 500;
   color: rgba(30, 25, 41, 0.7);
   padding-top: 4px;
 }
-.feedback--description {
+.content__feedback--description {
   padding: 25px;
   font-weight: 500;
   font-style: italic;
   color: rgba(30, 25, 41);
 }
-.feedback__block hr {
+.content__feedback--block hr {
   border: 0;
   height: 0;
   margin: auto 25px;
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-.feedback--item {
+.content__feedback--item {
   font-weight: 500;
   color: rgba(30, 25, 41);
   padding: 20px 25px 0 25px;
 }
-.feedback__showmore {
-  font-size: 0.875em;
+.content__feedback--showmore {
+  font-size: 1em;
   font-weight: 500;
   padding-bottom: 100px;
   text-align: center;
   text-transform: uppercase;
 }
-.feedback__showmore a {
+.content__feedback--showmore a.menu__links--link {
   color: rgb(90, 144, 186);
+}
+.content__feedback--showmore a.menu__links--link:hover {
+  color: rgb(165, 165, 165);
+  -webkit-transition: color 1s;
+  -moz-transition: color 1s;
+  -o-transition: color 1s;
+  transition: color 1s;
 }
 
 /* End of Main Content */
@@ -408,31 +416,46 @@ a.btn:hover {
   height: 240px;
   background-color: rgb(255, 255, 255);
 }
-.footer .menu {
-  margin: 0 20% 0 15%;
-  padding-top: 55px;
+.footer .header__menu {
+  margin: 0 250px; /* CHANGE % TO PX!!! */
 }
-.footer .logo > a img {
+.footer .menu__logo {
+  padding-top: 45px;
+}
+.footer .menu__logo > a img {
   transform: scale(0.9);
 }
-.footer a.link {
+.footer .menu__links > div:last-child {
+  margin-left: auto;
+}
+.footer a.menu__links--link {
   font-size: 0.9em;
   font-weight: 500;
   padding: 20px;
   color: rgb(78, 142, 181);
 }
-.footer .links > div:last-child {
-  margin-left: auto;
+.footer a.menu__links--link:hover {
+  color: rgb(165, 165, 165);
+  -webkit-transition: color 1s;
+  -moz-transition: color 1s;
+  -o-transition: color 1s;
+  transition: color 1s;
 }
-.footer a.btn {
+.footer a.menu__links--button {
   font-weight: 700;
   color: rgb(255, 255, 255);
   padding: 15px 35px;
-  background-color: rgb(90, 144, 186);
-  border-radius: 30px;
 }
-.footer .social {
-  margin: 5% 0 0 10%;
+.footer a.menu__links--button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(173, 212, 235);
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -o-transition: background-color 1s;
+  transition: background-color 1s;
+}
+.footer .content__social {
+  margin: 70px auto;
   transform: scale(0.85);
 }
 
@@ -489,18 +512,18 @@ a.btn:hover {
   .portfolio {
     margin-top: 70px;
   }
-  .portfolio__title,
-  .feedback__title {
+  .portfolio--title,
+  .feedback--title {
     padding-left: 0;
     text-align: center;
   }
-  .portfolio .button {
+  .portfolio .header--button {
     margin-top: 50px;
   }
   .feedback {
     margin-top: 70px;
   }
-  .feedback__block {
+  .feedback--block {
     margin-bottom: 20px;
   }
 }
@@ -523,7 +546,7 @@ a.btn:hover {
     font-size: 1.1em;
     width: 500px;
   }
-  .button {
+  .header--button {
     margin-top: 6%;
   }
 }
@@ -553,7 +576,7 @@ a.btn:hover {
   .position {
     font-size: 2em;
   }
-  .button {
+  .header--button {
     margin-top: 5%;
   }
   .feedback--item {
@@ -576,10 +599,10 @@ a.btn:hover {
     line-height: 18pt;
     width: 450px;
   }
-  .button {
+  .header--button {
     margin-top: 6%;
   }
-  .button > a {
+  .header--button > a {
     font-size: 0.9em;
     font-weight: 700;
     padding: 15px 35px;
@@ -619,10 +642,10 @@ a.btn:hover {
     line-height: 16pt;
     width: 360px;
   }
-  .button {
+  .header--button {
     margin-top: 5%;
   }
-  .button > a {
+  .header--button > a {
     font-size: 0.9em;
     font-weight: 700;
   }
@@ -638,10 +661,10 @@ a.btn:hover {
   .description {
     line-height: 15pt;
   }
-  .button {
+  .header--button {
     margin-top: 4%;
   }
-  .button > a {
+  .header--button > a {
     padding: 10px 30px;
     border-radius: 30px;
   }
