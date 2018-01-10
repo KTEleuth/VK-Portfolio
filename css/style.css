@@ -193,6 +193,10 @@ a.menu__links--button:hover {
 .content__social--icon {
     padding: 10px 15px 0 10px;
 }
+a.content__social--icon:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
 
 /* 2b. Portfolio */
 
@@ -211,7 +215,7 @@ a.menu__links--button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: auto 5%;
+    margin: auto 10%;
 }
 .content__portfolio--block {
     height: 266px;
@@ -395,6 +399,12 @@ a.menu__links--button:hover {
 
 /************* RESPONSIVE STARTS HERE ************/
 
+@media (max-width: 1116px) {
+    .content__portfolio--content {
+        margin: auto 0;
+    }
+}
+
 @media (max-width: 1040px) {
     .header .header__menu {
         margin-bottom: 4%;
@@ -488,9 +498,6 @@ a.menu__links--button:hover {
     }
     .header--button {
         margin-top: 6%;
-    }
-    .content__portfolio--content {
-        margin: auto 0;
     }
 }
 
