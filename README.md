@@ -2,5 +2,4 @@
 
 This is not my porfolio.
 
-syleleuth.github.io/VK-Portfolio
 syleleuth.github.io/VK-Portfolio/
